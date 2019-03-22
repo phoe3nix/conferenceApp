@@ -13,6 +13,8 @@
 		CB8D16072244C91100242FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8D16062244C91100242FA1 /* Assets.xcassets */; };
 		CB8D160A2244C91100242FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8D16082244C91100242FA1 /* LaunchScreen.storyboard */; };
 		CB8D160D2244C91100242FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8D160C2244C91100242FA1 /* main.m */; };
+		CB8D16142244CF7B00242FA1 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8D16132244CF7B00242FA1 /* MyClass.swift */; };
+		CB8D16182244CFE700242FA1 /* ExampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8D16172244CFE700242FA1 /* ExampleClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		CB8D16092244C91100242FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8D160B2244C91100242FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB8D160C2244C91100242FA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB8D16132244CF7B00242FA1 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		CB8D16162244CFE700242FA1 /* ExampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleClass.h; sourceTree = "<group>"; };
+		CB8D16172244CFE700242FA1 /* ExampleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleClass.m; sourceTree = "<group>"; };
+		CB8D16192244D06300242FA1 /* ConferenceApp-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConferenceApp-BridgingHeader.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				CB8D16082244C91100242FA1 /* LaunchScreen.storyboard */,
 				CB8D160B2244C91100242FA1 /* Info.plist */,
 				CB8D160C2244C91100242FA1 /* main.m */,
+				CB8D16132244CF7B00242FA1 /* MyClass.swift */,
+				CB8D16162244CFE700242FA1 /* ExampleClass.h */,
+				CB8D16172244CFE700242FA1 /* ExampleClass.m */,
+				CB8D16192244D06300242FA1 /* ConferenceApp-BridgingHeader.h */,
 			);
 			path = ConferenceTestApp;
 			sourceTree = "<group>";
@@ -101,6 +111,7 @@
 				TargetAttributes = {
 					CB8D15F92244C90F00242FA1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -140,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8D16142244CF7B00242FA1 /* MyClass.swift in Sources */,
 				CB8D16022244C90F00242FA1 /* ViewController.m in Sources */,
 				CB8D160D2244C91100242FA1 /* main.m in Sources */,
+				CB8D16182244CFE700242FA1 /* ExampleClass.m in Sources */,
 				CB8D15FF2244C90F00242FA1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPJFP8HGKX;
 				INFOPLIST_FILE = ConferenceTestApp/Info.plist;
@@ -293,6 +307,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.ConferenceTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ConferenceTestApp/ConferenceApp-BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPJFP8HGKX;
 				INFOPLIST_FILE = ConferenceTestApp/Info.plist;
@@ -310,6 +328,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.ConferenceTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ConferenceTestApp/ConferenceApp-BridgingHeader.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
