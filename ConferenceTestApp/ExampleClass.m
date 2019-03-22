@@ -15,4 +15,9 @@
 	__unused MySwiftClass *swiftClass = [MySwiftClass new];
 }
 
+- (instancetype)initWithString {
+	self = [super init];
+	return self;
+}
+
 @end
